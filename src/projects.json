@@ -1,0 +1,30 @@
+[
+	{
+		"name": "Cube",
+		"image": "./images/1.jpg"
+	},
+	{
+		"name": "Octa",
+		"image": "./images/2.jpg"
+	},
+	{
+		"name": "Helix",
+		"image": "./images/3.jpg"
+	},
+	{
+		"name": "Luminar",
+		"image": "./images/4.jpg"
+	},
+	{
+		"name": "Pyramid",
+		"image": "./images/5.jpg"
+	},
+	{
+		"name": "Torus",
+		"image": "./images/6.jpg"
+	},
+	{
+		"name": "Crescent",
+		"image": "./images/7.jpg"
+	}
+]

@@ -1,0 +1,141 @@
+@import "reset";
+
+// Spacing
+$paddingHor: 16px;
+
+// Fonts
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins_Regular.woff");
+}
+@font-face {
+  font-family: "Saol";
+  src: url("/fonts/SaolDisplay-Light.woff");
+}
+
+// Reset
+body {
+  overflow: hidden;
+}
+// body,
+#root {
+  margin: 0;
+  width: 100vw;
+
+  height: 100vh;
+
+  font-family: Poppins;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top {
+  width: calc(100% - 2 * $paddingHor);
+  margin: 30px;
+  font-family: Saol;
+  font-weight: 600;
+  font-size: 32px;
+
+  .date {
+    font-size: 10px;
+    margin-left: 10px;
+  }
+}
+
+.bottom {
+  font-family: Saol;
+  font-weight: 700;
+  margin: 30px;
+  width: 100%;
+
+  ul {
+    width: 45%;
+    margin-left: auto;
+    margin-right: 100px;
+    display: flex;
+    justify-content: space-between;
+    // align-items: space-between;
+
+    li {
+      p,
+      a {
+        margin-top: 8px;
+        font-size: 12px;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.slider__container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  //   height: 80vh;
+}
+
+.slide__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  .slide {
+    position: relative;
+    height: 100%;
+    margin: 0 $paddingHor;
+    overflow: hidden;
+    border-radius: 10px;
+
+    h2 {
+      margin: 0;
+      position: absolute;
+      bottom: 20px;
+      left: 40px;
+      font-size: 190px;
+      color: #fff;
+      z-index: 1;
+      font-weight: 300;
+      color: rgb(255, 255, 255);
+      line-height: 1;
+
+      .letter__mask {
+        display: inline-block;
+        overflow: hidden;
+        .letter {
+          display: inline-block;
+          transition: transform 1.2s cubic-bezier(0.5, 0.01, 0.48, 1);
+          transform: translateX(-100%);
+          top: 0;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(0.4) contrast(0.8) brightness(0.9);
+      transition: filter 0.7s 0.2s, transform 1s ease-in-out 0.3s;
+    }
+  }
+  &.show {
+    h2 {
+      .letter__mask {
+        .letter {
+          transform: translateX(0);
+        }
+      }
+    }
+    img {
+      filter: saturate(1) contrast(0.8) brightness(0.9);
+      transform: scale(1.06);
+    }
+  }
+}
