@@ -153,6 +153,7 @@ function Slider() {
       } else {
         const target = gsap.utils.snap(100, scroll.currentPosition);
         scroll.nextPosition = target;
+        scroll.currentPosition = scroll.nextPosition;
       }
       scroll.direction = e.deltaY > 0 ? "down" : "up";
     },
