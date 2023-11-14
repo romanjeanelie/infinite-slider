@@ -12,4 +12,4 @@ npm start
 ```
 
 ## Credits
-You can follow me to get more tips [@romanjeanelie](https://twitter.com/romanjeanelie).
+You can follow me to get more code tips [@romanjeanelie](https://twitter.com/romanjeanelie).
