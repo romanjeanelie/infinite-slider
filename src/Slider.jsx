@@ -7,7 +7,7 @@ import projects from "@/projects.json";
 // Utils
 import lerp from "@/utils/lerp";
 import useRaf from "@/utils/useRaf";
-import SplitText from "@/utils/splitText";
+import SplitText from "@/utils/SplitText";
 
 const Slide = forwardRef(({ index, name, image, totalLength }, ref) => {
   // Config
